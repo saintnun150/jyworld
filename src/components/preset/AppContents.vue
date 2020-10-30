@@ -1,26 +1,24 @@
 <template>
   <div id="main-contents-wrap">
-    <LoginPage></LoginPage>
+    <BoardHome></BoardHome>
   </div>
 </template>
 
 <script>
-import LoginPage from "@/components/login/Login";
+import BoardHome from "@/components/board/BoardHome";
 export default {
   name: "AppContents",
   components: {
-    LoginPage
-
+    BoardHome,
   }
 }
 </script>
 
 <style scoped lang="scss">
 #main-contents-wrap{
-  display: flex;
+  /*display: flex;
   flex: 1;
   justify-content: center;
-  align-content: center;
-  margin-top: 100px;
+  align-content: center;*/
 }
 </style>

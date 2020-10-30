@@ -28,8 +28,9 @@ export default {
 
 <style scoped lang="scss">
 #login-wrap {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +48,8 @@ export default {
   margin-bottom: 1rem;
   .form-input {
     background: #fafafa;
-    border: 1px solid #eeeeee;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
     padding: 10px;
     width: 100%;
   }

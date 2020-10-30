@@ -34,6 +34,9 @@ body {
     flex-direction: column;
     background-color: transparent;
     min-height: 100vh;
+    /*flex footer 고정
+      row : 자동 확장
+      column : 컨테이너 높이를 지정해야함*/
   }
 }
 

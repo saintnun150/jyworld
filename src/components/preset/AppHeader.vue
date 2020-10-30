@@ -13,7 +13,7 @@ export default {
 <style scoped lang="scss">
 #header-wrap{
   height: 70px;
-  background-color: #F2AC29;
+  background-color: #2d3a4b;
   color: whitesmoke;
  #header-brand{
    text-align: center;
