@@ -1,11 +1,10 @@
 <template>
   <div>
-    <editor
-        ref="toastuiEditor"
+    <Editor
+        ref="toastUIEditor"
         initialEditType="wysiwyg"
         v-model="content"
     />
-    <button class="form-button" @click="saveArticle">저장</button>
   </div>
 </template>
 

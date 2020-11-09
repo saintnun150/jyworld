@@ -9,12 +9,13 @@
   },
   "dependencies": {
     "@toast-ui/vue-editor": "^2.5.0",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.3",
+    "firebase": "^8.0.1",
     "swiper": "5.x",
-    "vue": "^2.6.11",
-    "vue-awesome-swiper": "^4.1.1"
+    "vue": "^2.6.12",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-router": "^3.4.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -23,6 +24,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.4",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

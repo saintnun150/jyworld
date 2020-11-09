@@ -5,8 +5,8 @@
         <h3>글 작성</h3>
       </div>
       <div class="form-group">
-        <h4>내용</h4>
-        <input class="form-input" type="text">
+        <h4>제목</h4>
+        <input class="form-input" type="text" v-model="title">
       </div>
       <div class="form-group">
         <h4>내용</h4>
@@ -19,17 +19,48 @@
 
 <script>
 import ToastUIEditor from "@/components/utils/ToastUI-Editor";
+import firebase from "@/firebase";
 
+let database = firebase.firestore();
 export default {
   name: "ArticleForm",
   components: {
     ToastUIEditor
   },
-  methods: {
-    saveArticle(){
-      let sd = this.$refs.editor.$refs.toastuiEditor.invoke('getHtml');
-      console.log('sd2', sd);
+  data() {
+    return {
+      title: null
     }
+  },
+  methods: {
+    saveArticle() {
+      let focusEditor = this.$refs.editor.$refs.toastUIEditor;
+      let getTitle = this.title;
+      let getContent = focusEditor.invoke('getHtml');
+      let dt = new Date();
+      let createDate = dt.toLocaleString();
+      let uuid = createUUID();
+
+      database.collection("articles").add({
+        uuid : uuid,
+        title: getTitle,
+        content: getContent,
+        date: createDate
+      })
+          .then(function (docRef) {
+            console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(function (error) {
+            console.error("Error adding document: ", error);
+          });
+
+      function createUUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+          let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
+    },
   }
 }
 </script>
