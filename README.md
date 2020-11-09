@@ -1,24 +1,6 @@
 # jyworld
 
-## Project setup
-```
-yarn install
-```
+## update
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 1. init
+### 2. google firebase - firestore 연결
